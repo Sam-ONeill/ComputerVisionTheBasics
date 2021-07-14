@@ -1,0 +1,7 @@
+jupyterlab
+opencv-python
+imshowtools
+tqdm
+matplotlib
+numpy
+ipympl
