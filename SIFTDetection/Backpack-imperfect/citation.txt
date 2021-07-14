@@ -1,0 +1,6 @@
+@inproceedings{Scharstein2014HighResolutionSD,
+  title={High-Resolution Stereo Datasets with Subpixel-Accurate Ground Truth},
+  author={Daniel Scharstein and Heiko Hirschm{\"u}ller and York Kitajima and Greg Krathwohl and Nera Nesic and Xi Wang and Porter Westling},
+  booktitle={GCPR},
+  year={2014}
+}
