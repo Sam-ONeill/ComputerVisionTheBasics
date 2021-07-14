@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 jupyterlab
 opencv-python
 imshowtools
 tqdm
 matplotlib
 numpy
+=======
+jupyterlab
+opencv-python
+imshowtools
+tqdm
+matplotlib
+numpy
+>>>>>>> 618abf51d69b84fe21efc563ed26f6b8873216f4
 ipympl
