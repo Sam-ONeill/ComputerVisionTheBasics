@@ -70,17 +70,17 @@ while True:
         # we will get y coordinate of finger-tip and check if it lies above middle landmark of that finger
         # details: https://google.github.io/mediapipe/solutions/hands
 
-        #if handLandmarks[4][3] == "Right" and handLandmarks[4][1] > handLandmarks[3][1]:  # Right Thumb
+        # if handLandmarks[4][3] == "Right" and handLandmarks[4][1] > handLandmarks[3][1]:  # Right Thumb
         #    count = count + 1
-        #elif handLandmarks[4][3] == "Left" and handLandmarks[4][1] < handLandmarks[3][1]:  # Left Thumb
+        # elif handLandmarks[4][3] == "Left" and handLandmarks[4][1] < handLandmarks[3][1]:  # Left Thumb
         #    count = count + 1
-        #if handLandmarks[8][2] < handLandmarks[6][2]:  # Index finger
+        # if handLandmarks[8][2] < handLandmarks[6][2]:  # Index finger
         #    count = count + 1
-        #if handLandmarks[12][2] < handLandmarks[10][2]:  # Middle finger
+        # if handLandmarks[12][2] < handLandmarks[10][2]:  # Middle finger
         #    count = count + 1
-        #if handLandmarks[16][2] < handLandmarks[14][2]:  # Ring finger
+        # if handLandmarks[16][2] < handLandmarks[14][2]:  # Ring finger
         #    count = count + 1
-        #if handLandmarks[20][2] < handLandmarks[18][2]:  # Little finger
+        # if handLandmarks[20][2] < handLandmarks[18][2]:  # Little finger
         #    count = count + 1
 
         if Index_Tip_H > Index_Pip_H and Middle_Tip_H > Middle_Pip_H and Ring_Tip_H > Ring_Pip_H and Pinky_Tip_H > Pinky_Pip_H and Thumb_Tip_H < Index_Pip_H:
@@ -89,10 +89,16 @@ while True:
         if Index_Tip_H == Index_Pip_H and Middle_Tip_H == Middle_Pip_H and Ring_Tip_H == Ring_Pip_H and Pinky_Tip_H == Pinky_Pip_H and (handLandmarks[4][3] == "Right" and Thumb_Tip_W > Thumb_Dip_W) or (handLandmarks[4][3] == "left" and Thumb_Tip_W > Thumb_Dip_W):
             letter = "c"
 
-        if handLandmarks[8][2] < handLandmarks[6][2] and handLandmarks[12][2] < handLandmarks[10][2] and \
-                handLandmarks[16][2] < handLandmarks[14][2] and handLandmarks[20][2] < handLandmarks[18][2] and \
-                handLandmarks[13][2] == handLandmarks[4][2]:
-            letter = "b"
+        if Index_Tip_H < Index_Pip_H and Middle_Tip_H < Middle_Pip_H and \
+                Ring_Tip_H < Ring_Pip_H and Pinky_Tip_H < Pinky_Pip_H:
+            if handLandmarks[4][3] == "Left" and Ring_MCP_W - 50 <= Thumb_Tip_W <= Ring_MCP_W:
+                letter = "b"
+            elif handLandmarks[4][3] == "Right" and Ring_MCP_W + 50 >= Thumb_Tip_W >= Ring_MCP_W:
+                letter = "b"
+
+        #if Index_Tip_H < Index_Pip_H and Middle_Tip_H > Middle_Pip_H and Ring_Tip_H > Ring_Pip_H and Pinky_Tip_H > Pinky_Pip_H :
+        # if Index_Tip_H < Index_Pip_H
+
         cv2.putText(image, letter, (45, 375), cv2.FONT_HERSHEY_SIMPLEX, 5, (255, 0, 0), 25)
         cv2.imshow("Volume", image)
         cv2.waitKey(1)
