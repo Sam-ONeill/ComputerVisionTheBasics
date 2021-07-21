@@ -96,8 +96,17 @@ while True:
             elif handLandmarks[4][3] == "Right" and Ring_MCP_W + 50 >= Thumb_Tip_W >= Ring_MCP_W:
                 letter = "b"
 
-        #if Index_Tip_H < Index_Pip_H and Middle_Tip_H > Middle_Pip_H and Ring_Tip_H > Ring_Pip_H and Pinky_Tip_H > Pinky_Pip_H :
-        # if Index_Tip_H < Index_Pip_H
+        if Index_Tip_H < Index_Pip_H and Middle_Tip_H > Middle_Pip_H and Ring_Tip_H > Ring_Pip_H and Pinky_Tip_H > Pinky_Pip_H:
+            if handLandmarks[4][3] == "Left" and Ring_MCP_W - 50 <= Thumb_Tip_W <= Ring_MCP_W:
+                letter = "d"
+            elif handLandmarks[4][3] == "Right" and Ring_MCP_W + 50 >= Thumb_Tip_W >= Ring_MCP_W:
+                letter = "d"
+
+        if Index_Tip_H > Middle_Dip_H and Middle_Tip_H < Middle_Pip_H and Ring_Tip_H < Ring_Pip_H and Pinky_Tip_H < Pinky_Pip_H:
+            if handLandmarks[4][3] == "Left" and Index_Pip_H - 50 <= Thumb_Tip_W <= Index_Pip_W:
+                letter = "f"
+            elif handLandmarks[4][3] == "Right" and Index_Pip_H + 50 >= Thumb_Tip_W >= Index_Pip_W:
+                letter = "f"
 
         cv2.putText(image, letter, (45, 375), cv2.FONT_HERSHEY_SIMPLEX, 5, (255, 0, 0), 25)
         cv2.imshow("Volume", image)
