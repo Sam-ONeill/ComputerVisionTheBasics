@@ -49,7 +49,7 @@ class HandDetector:
                                                                                        imgH)
 
                     print(point)
-                    print(pixelCoordinatesLandmark)
+                    #print(pixelCoordinatesLandmark)
                     print(normalizedLandmark)
 
         return landMarkList
