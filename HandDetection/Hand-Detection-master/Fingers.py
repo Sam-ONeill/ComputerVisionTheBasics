@@ -86,10 +86,8 @@ while True:
         if Index_Tip_H > Index_Pip_H and Middle_Tip_H > Middle_Pip_H and Ring_Tip_H > Ring_Pip_H and Pinky_Tip_H > Pinky_Pip_H and Thumb_Tip_H < Index_Pip_H:
             letter = "a"
 
-        if Index_Tip_H == Index_Pip_H and Middle_Tip_H == Middle_Pip_H and Ring_Tip_H == Ring_Pip_H and Pinky_Tip_H == Pinky_Pip_H and (
-                handLandmarks[4][3] == "Right" and Thumb_Tip_W > Thumb_Dip_W) or (
-                handLandmarks[4][3] == "left" and Thumb_Tip_W > Thumb_Dip_W):
-            letter = "c"
+        #if (Pinky_Pip_H - 50 <= Ring_Pip_H <= Pinky_Pip_H or Pinky_Pip_H + 50 >= Ring_Pip_H >= Pinky_Pip_H) and (Ring_Pip_H - 50 <= Middle_Pip_H <= Ring_Pip_H or Ring_Pip_H + 50 >= Middle_Pip_H >= Ring_Pip_H) and (Middle_Pip_H - 50 <= Index_Pip_H <= Middle_Pip_H or Middle_Pip_H + 50 >= Index_Pip_H >= Middle_Pip_H) and (handLandmarks[4][3] == "Right" and Thumb_Tip_W > Thumb_Dip_W) or (handLandmarks[4][3] == "left" and Thumb_Tip_W > Thumb_Dip_W) and Index_Tip_H > Thumb_Tip_H:
+         #   letter = "c"
 
         if Index_Tip_H < Index_Pip_H and Middle_Tip_H < Middle_Pip_H and \
                 Ring_Tip_H < Ring_Pip_H and Pinky_Tip_H < Pinky_Pip_H:
@@ -131,3 +129,4 @@ while True:
         cv2.putText(image, letter, (45, 375), cv2.FONT_HERSHEY_SIMPLEX, 5, (255, 0, 0), 25)
         cv2.imshow("Volume", image)
         cv2.waitKey(1)
+
