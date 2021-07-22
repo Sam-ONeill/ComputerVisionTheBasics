@@ -186,9 +186,9 @@ while True:
             elif handLandmarks[4][3] == "Right" and Ring_MCP_W + 50 >= Thumb_Tip_W >= Ring_MCP_W and Middle_Tip_W > Index_Tip_W:
                 letter = "r"
 
-        #if Middle_Tip_H < Middle_MCP_H and Ring_Tip_H > Ring_MCP_H and Pinky_Tip_H > Pinky_MCP_H and :
+       # if Middle_Tip_H > Middle_MCP_H and Ring_Tip_H > Ring_MCP_H and Pinky_Tip_H > Pinky_MCP_H and Thumb_Tip_H >= Index_MCP_H and Index_Tip_H <= Index_Dip_H:
             #if handLandmarks[4][3] == "Left" and :
-        #    letter = "t"
+            #letter = "t"
             #elif handLandmarks[4][3] == "Right" and :
             #    letter = "t"
 
