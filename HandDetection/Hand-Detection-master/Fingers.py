@@ -116,15 +116,39 @@ while True:
 
         if Index_Tip_H < Middle_Dip_H and Middle_Tip_H < Middle_Pip_H and Ring_Tip_H < Ring_Pip_H and Pinky_Tip_H < Pinky_Pip_H:
             if handLandmarks[4][3] == "Right" and handLandmarks[4][1] > handLandmarks[3][1]:  # Right Thumb
-                letter = "l"
+                letter = "L"
             elif handLandmarks[4][3] == "Left" and handLandmarks[4][1] < handLandmarks[3][1]:  # Left Thumb
-                letter = "l"
+                letter = "L"
 
         if Index_Tip_H > Wrist_H and Middle_Tip_H > Wrist_H and Ring_Tip_H > Ring_MCP_H and Pinky_Tip_H > Pinky_MCP_H and Ring_Dip_H < Index_Dip_H and Pinky_Dip_H < Index_Dip_H:
             #if handLandmarks[4][3] == "Left" and Ring_MCP_W - 50 <= Thumb_Tip_W <= Ring_MCP_W:
             letter = "n"
             #elif handLandmarks[4][3] == "Right" and Ring_MCP_W + 50 >= Thumb_Tip_W >= Ring_MCP_W:
             #    letter = "n"
+
+        if Index_Tip_H < Middle_Dip_H and Middle_Tip_H < Middle_Pip_H and Ring_Tip_H < Ring_Pip_H and Pinky_Tip_H > Pinky_Pip_H:
+            if handLandmarks[4][3] == "Left" and Ring_MCP_W - 50 <= Thumb_Tip_W <= Ring_MCP_W:
+                letter = "p"
+            elif handLandmarks[4][3] == "Right" and Ring_MCP_W + 50 >= Thumb_Tip_W >= Ring_MCP_W:
+                letter = "p"
+
+        if Index_Tip_H < Index_Pip_H and Middle_Tip_H < Middle_Pip_H and Ring_Tip_H > Ring_Pip_H and Pinky_Tip_H > Pinky_Pip_H:
+            if handLandmarks[4][3] == "Left" and Ring_MCP_W - 50 <= Thumb_Tip_W <= Ring_MCP_W and Middle_Tip_W < Index_Tip_W:
+                letter = "r"
+            elif handLandmarks[4][3] == "Right" and Ring_MCP_W + 50 >= Thumb_Tip_W >= Ring_MCP_W and Middle_Tip_W > Index_Tip_W:
+                letter = "r"
+
+        #if Index_Dip_H < Middle_Pip_H and Middle_Tip_H < Middle_MCP_H and Ring_Tip_H > Ring_MCP_H and Pinky_Tip_H > Pinky_MCP_H:
+        #    if handLandmarks[4][3] == "Left" and Index_Tip_H - 50 <= Thumb_Tip_H <= Index_Tip_H and Index_Tip_W - 50 <= Thumb_Tip_W <= Index_Tip_W:
+        #        letter = "t"
+        #    elif handLandmarks[4][3] == "Right" and Index_Tip_H + 50 >= Thumb_Tip_H >= Index_Tip_H and Index_Tip_W + 50 >= Thumb_Tip_W >= Index_Tip_W:
+        #        letter = "t"
+
+        if Index_Tip_H < Index_Pip_H and Middle_Tip_H < Middle_Pip_H and Ring_Tip_H > Ring_Pip_H and Pinky_Tip_H > Pinky_Pip_H:
+            if handLandmarks[4][3] == "Left" and Ring_MCP_W - 50 <= Thumb_Tip_W <= Ring_MCP_W and Middle_Tip_W - 80 >= Index_Tip_W:
+                letter = "v"
+            elif handLandmarks[4][3] == "Right" and Ring_MCP_W + 50 >= Thumb_Tip_W >= Ring_MCP_W and Middle_Tip_W <= Index_Tip_W - 80:
+                letter = "v"
 
         cv2.putText(image, letter, (45, 375), cv2.FONT_HERSHEY_SIMPLEX, 5, (255, 0, 0), 25)
         cv2.imshow("Volume", image)
