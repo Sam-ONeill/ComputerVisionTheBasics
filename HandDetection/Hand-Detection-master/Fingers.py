@@ -96,6 +96,12 @@ while True:
             elif handLandmarks[4][3] == "Right" and Ring_MCP_W + 50 >= Thumb_Tip_W >= Ring_MCP_W:
                 letter = "b"
 
+        if Index_Dip_H + 30 >= Index_Tip_H >= Index_Dip_H - 30 and Middle_Dip_H + 30 >= Middle_Tip_H >= Middle_Dip_H - 30 and Ring_Dip_H + 30 >= Ring_Tip_H >= Ring_Dip_H - 30:
+            if handLandmarks[4][3] == "Left" and Thumb_Tip_W < Thumb_Dip_W and Index_Tip_H <= Thumb_Tip_H:
+                letter = "C"
+            elif handLandmarks[4][3] == "Right" and Thumb_Tip_W > Thumb_Dip_W and Index_Tip_H <= Thumb_Tip_H:
+                letter = "C"
+
         if Index_Tip_H < Index_Pip_H and Middle_Tip_H > Middle_Pip_H and Ring_Tip_H > Ring_Pip_H and Pinky_Tip_H > Pinky_Pip_H:
             if handLandmarks[4][3] == "Left" and Ring_MCP_W - 50 <= Thumb_Tip_W <= Ring_MCP_W:
                 letter = "d"
@@ -109,16 +115,16 @@ while True:
                 letter = "e"
 
         if Index_Tip_H > Middle_Dip_H and Middle_Tip_H < Middle_Pip_H and Ring_Tip_H < Ring_Pip_H and Pinky_Tip_H < Pinky_Pip_H:
-            if handLandmarks[4][3] == "Left" and Index_Pip_H - 50 <= Thumb_Tip_W <= Index_Pip_W:
-                letter = "f"
-            elif handLandmarks[4][3] == "Right" and Index_Pip_H + 50 >= Thumb_Tip_W >= Index_Pip_W:
-                letter = "f"
+            if handLandmarks[4][3] == "Left" and Index_Pip_W - 50 <= Thumb_Tip_W <= Index_Pip_W:
+                letter = "g"
+            elif handLandmarks[4][3] == "Right" and Index_Pip_W + 50 >= Thumb_Tip_W >= Index_Pip_W:
+                letter = "g"
 
         if Index_Tip_H > Middle_Dip_H and Middle_Tip_H < Middle_Pip_H and Ring_Tip_H < Ring_Pip_H and Pinky_Tip_H < Pinky_Pip_H:
             if handLandmarks[4][3] == "Left" and Index_Tip_H - 50 <= Thumb_Tip_H <= Index_Tip_H:
-                letter = "g"
+                letter = "f"
             elif handLandmarks[4][3] == "Right" and Index_Tip_H + 50 >= Thumb_Tip_H >= Index_Tip_H:
-                letter = "g"
+                letter = "f"
 
         if Index_Tip_H < Middle_Dip_H and Middle_Tip_H > Middle_Pip_H and Ring_Tip_H > Ring_Pip_H and Pinky_Tip_H < Pinky_Pip_H:
             if handLandmarks[4][3] == "Left" and Ring_MCP_W - 50 <= Thumb_Tip_W <= Ring_MCP_W:
@@ -150,6 +156,12 @@ while True:
         if Index_Tip_H > Wrist_H and Middle_Tip_H > Wrist_H and Ring_Tip_H > Ring_MCP_H and Pinky_Tip_H > Pinky_MCP_H and Ring_Dip_H < Index_Dip_H and Pinky_Dip_H < Index_Dip_H:
             letter = "n"
 
+        if Index_Dip_H + 30 >= Index_Tip_H >= Index_Dip_H - 30 and Middle_Dip_H + 30 >= Middle_Tip_H >= Middle_Dip_H - 30 and Ring_Dip_H + 30 >= Ring_Tip_H >= Ring_Dip_H - 30:
+            if handLandmarks[4][3] == "Left" and Thumb_Tip_W < Thumb_Dip_W and Index_Tip_H == Thumb_Tip_H:
+                letter = "o"
+            elif handLandmarks[4][3] == "Right" and Thumb_Tip_W > Thumb_Dip_W and Index_Tip_H <= Thumb_Tip_H:
+                letter = "o"
+
         if Index_Tip_H < Middle_Dip_H and Middle_Tip_H < Middle_Pip_H and Ring_Tip_H > Ring_Pip_H and Pinky_Tip_H < Pinky_Pip_H:
             if handLandmarks[4][3] == "Left" and Ring_MCP_W - 50 <= Thumb_Tip_W <= Ring_MCP_W:
                 letter = "q"
@@ -169,7 +181,7 @@ while True:
                 letter = "u"
 
         if Index_Tip_H > Middle_Dip_H and Middle_Tip_H > Middle_Pip_H and Ring_Tip_H > Ring_Pip_H and Pinky_Tip_H < Pinky_Pip_H:
-            if handLandmarks[4][3] == "Right" and Thumb_Tip_W > Thumb_Dip_W:
+            if handLandmarks[4][3] == "Left" and Thumb_Tip_W > Thumb_Dip_W:
                 letter = "y"
             elif handLandmarks[4][3] == "Right" and Thumb_Tip_W < Thumb_Dip_W:
                 letter = "y"
