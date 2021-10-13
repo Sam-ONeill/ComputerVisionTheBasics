@@ -1,8 +1,9 @@
-<<<<<<< HEAD
+
 # ComputerVisionBasics
-=======
+
 # Computer Vision The Basics
 This repository is a collection of small computer vision projects and is the collaborative work of Sam O'Neill and David Afalla.
+* Most recently we have been working on designing a tool to recognise Irish sign langauge (ISL) and print it to the screen in English
 
 ##SIFT detection
 This project utilises libraries such as OpenCV, imshowtools, numpy and matplotlib to implement
@@ -17,4 +18,3 @@ This project utilises libraries such as OpenCV, imshowtools, numpy and matplotli
  
    
 
->>>>>>> 618abf51d69b84fe21efc563ed26f6b8873216f4
